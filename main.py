@@ -36,10 +36,10 @@ normal_canvas, all_canvas = None, None
 
 if isinstance(config["gpu_ids"], int) and (config["gpu_ids"] >= 0):
     device = config["gpu_ids"]
+    print(f"running on device gpu {device}")
 else:
     device = "cpu"
-
-print(f"running on device {device}")
+    print(f"running on device {device}")
 
 for idx in tqdm(range(len(sample_list))):
     depth = None
